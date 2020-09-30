@@ -1,11 +1,11 @@
 # Book settings
-title: Coded Reality
+title: Decoded Reality
 author: Falaah Arif Khan and Abhishek Gupta
 logo: maiei_logo.png
 
 # Information about where the book exists on the web
 repository:
-  url                       : https://github.com/ai-ethics/coded-reality
+  url                       : https://github.com/ai-ethics/decoded-reality
   branch                    : master
 
 launch_buttons:
