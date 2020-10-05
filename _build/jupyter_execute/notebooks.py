@@ -1,78 +1,34 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Visualization in our everyday workbench
+# # Model Inputs
 
 # In[1]:
 
 
 import pandas as pd
+from resistance_ai import decode_reality
 
 
 # In[2]:
 
 
-from typing import List
+model_inputs = pd.read_csv("Data.csv")
+decode_reality.visualize(model_inputs)
 
+
+# ![An arcade mechanical picker game is depicted, where the toys are replaced by people’s faces. There’s a stark disparity between the abundance of ‘western’ faces and the dearth of those with darker skin tones. There is a sign on top of the game saying “diverse, ethical, fair” with the faces of prominent scholars Deborah Raji,Timnit Gebru and Joy Boulamwini. A person in a jacket with the logos of big tech companies is seen operating the joystick. His face is superimposed with the words ‘A Silicon Valley type’.The mechanical hand is moving downwards towards the toy faces and has the words Efficiency, Advancement, Progress and Innovation written on it](Data.gif)
 
 # In[3]:
 
 
-column_names: List[str] = ['age', 'workclass', 'fnlwgt' ,'education', 'education-num', 'marital-status',
-                           'occupation', 'relationship', 'race', 'sex', 'capital-gain', 'capital-loss',
-                          'hours-per-week', 'native-country', 'income']
+decode_reality.explain(model_inputs)
 
 
-# In[4]:
-
-
-training_data: pd.DataFrame = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data", header=None, names=column_names)
-
-
-# In[5]:
-
-
-test_data: pd.DataFrame = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test', header=None, names=column_names, skiprows=[0])
-
-
-# In[6]:
-
-
-X_train: pd.DataFrame = training_data.iloc[:,:-1]
-
-
-# In[7]:
-
-
-X_test: pd.DataFrame = test_data.iloc[:, :-1]
-
-
-# ![Data Panel](Data.gif)
-
-# ### AI presented as the harbinger of progress and hence data is for the taking
+# Data is for the taking. No matter who, no matter how private or personal the data in question.
 # 
-# Arcade mechanical picker game is depicted, where the toys are replaced by people’s faces. 
-# There’s a stark disparity between the abundance of ‘western’ faces and those with darker skin tones. 
-# Ironically there is a sign on top of the game saying “diverse, ethical, fair” with the faces of prominent scholars. 
-# A Mark- Zuckerburg-type is seen operating the joystick and playing the game. 
-# The mechanical hand has the words Efficiency, Advancement, Progress and Innovation on it.
-
-# In[8]:
-
-
-y_train: pd.Series = training_data.iloc[:, -1]
-
-
-# In[9]:
-
-
-y_test: pd.Series = test_data.iloc[:,-1]
-
-
-# ![Labels](Labels.gif)
-
-# ### People at the margins that do not conform to societal archetypes are the ones most affected by imposed class labels
+# Even despite there being sufficient scholarship proving the harm of certain applications (such as Facial Recognition), the same old adage of Progress and Innovation is touted and used to justify the obsession with creating technological solutions to societal problems.
 # 
-# A powerful, white male shoots an arrow into a large terrain. 
-# The arrow reads “Objectivity”. 
-# The ground starts splitting into 4-5 different land masses and people at the boundary start to fall into the abyss below.
+# Self-affirming ‘Fairness’ and ‘Ethics’ certificates are stamped onto data collection strategies, while the ground reality remains discriminatory and predatory. 
+# 
+# A data point might just look like a bunch of numbers loaded in a Data frame, but the irrevocable truth is that it wasn’t created out of thin air – it was collected by an power-wielding entity, about a living-breathing human being, in a socio-techno-political context.

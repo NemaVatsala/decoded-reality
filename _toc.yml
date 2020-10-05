@@ -1,4 +1,6 @@
 - file: intro
-- file: content
   sections:
-    - file: notebooks
+    - file: model_inputs
+    - file: model_labels
+    - file: model_training
+    - file: model_deployment

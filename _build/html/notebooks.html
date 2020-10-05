@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visualization in our everyday workbench &#8212; Decoded Reality</title>
+    <title>Model Inputs &#8212; Decoded Reality</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Take a look at our visualization" href="content.html" />
+    <link rel="prev" title="Welcome to Decoded Reality" href="intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -78,16 +78,9 @@
 </ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
-  <a class="reference internal" href="content.html">
-   Take a look at our visualization
+  <a class="current reference internal" href="#">
+   Model Inputs
   </a>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Visualization in our everyday workbench
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -180,19 +173,7 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ai-presented-as-the-harbinger-of-progress-and-hence-data-is-for-the-taking">
-   AI presented as the harbinger of progress and hence data is for the taking
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#people-at-the-margins-that-do-not-conform-to-societal-archetypes-are-the-ones-most-affected-by-imposed-class-labels">
-   People at the margins that do not conform to societal archetypes are the ones most affected by imposed class labels
-  </a>
- </li>
-</ul>
-
+            
         </nav>
     </div>
 </div>
@@ -201,89 +182,36 @@
         
               <div>
                 
-  <div class="section" id="visualization-in-our-everyday-workbench">
-<h1>Visualization in our everyday workbench<a class="headerlink" href="#visualization-in-our-everyday-workbench" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="model-inputs">
+<h1>Model Inputs<a class="headerlink" href="#model-inputs" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">resistance_ai</span> <span class="kn">import</span> <span class="n">decode_reality</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_inputs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Data.csv&quot;</span><span class="p">)</span>
+<span class="n">decode_reality</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">model_inputs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p><img alt="An arcade mechanical picker game is depicted, where the toys are replaced by people’s faces. There’s a stark disparity between the abundance of ‘western’ faces and the dearth of those with darker skin tones. There is a sign on top of the game saying “diverse, ethical, fair” with the faces of prominent scholars Deborah Raji,Timnit Gebru and Joy Boulamwini. A person in a jacket with the logos of big tech companies is seen operating the joystick. His face is superimposed with the words ‘A Silicon Valley type’.The mechanical hand is moving downwards towards the toy faces and has the words Efficiency, Advancement, Progress and Innovation written on it" src="_images/Data.gif" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;workclass&#39;</span><span class="p">,</span> <span class="s1">&#39;fnlwgt&#39;</span> <span class="p">,</span><span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;education-num&#39;</span><span class="p">,</span> <span class="s1">&#39;marital-status&#39;</span><span class="p">,</span>
-                           <span class="s1">&#39;occupation&#39;</span><span class="p">,</span> <span class="s1">&#39;relationship&#39;</span><span class="p">,</span> <span class="s1">&#39;race&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;capital-gain&#39;</span><span class="p">,</span> <span class="s1">&#39;capital-loss&#39;</span><span class="p">,</span>
-                          <span class="s1">&#39;hours-per-week&#39;</span><span class="p">,</span> <span class="s1">&#39;native-country&#39;</span><span class="p">,</span> <span class="s1">&#39;income&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decode_reality</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="n">model_inputs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">training_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_test</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">test_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="Data Panel" src="_images/Data.gif" /></p>
-<div class="section" id="ai-presented-as-the-harbinger-of-progress-and-hence-data-is-for-the-taking">
-<h2>AI presented as the harbinger of progress and hence data is for the taking<a class="headerlink" href="#ai-presented-as-the-harbinger-of-progress-and-hence-data-is-for-the-taking" title="Permalink to this headline">¶</a></h2>
-<p>Arcade mechanical picker game is depicted, where the toys are replaced by people’s faces.
-There’s a stark disparity between the abundance of ‘western’ faces and those with darker skin tones.
-Ironically there is a sign on top of the game saying “diverse, ethical, fair” with the faces of prominent scholars.
-A Mark- Zuckerburg-type is seen operating the joystick and playing the game.
-The mechanical hand has the words Efficiency, Advancement, Progress and Innovation on it.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_train</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">training_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_test</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">test_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="Labels" src="_images/Labels.gif" /></p>
-</div>
-<div class="section" id="people-at-the-margins-that-do-not-conform-to-societal-archetypes-are-the-ones-most-affected-by-imposed-class-labels">
-<h2>People at the margins that do not conform to societal archetypes are the ones most affected by imposed class labels<a class="headerlink" href="#people-at-the-margins-that-do-not-conform-to-societal-archetypes-are-the-ones-most-affected-by-imposed-class-labels" title="Permalink to this headline">¶</a></h2>
-<p>A powerful, white male shoots an arrow into a large terrain.
-The arrow reads “Objectivity”.
-The ground starts splitting into 4-5 different land masses and people at the boundary start to fall into the abyss below.</p>
-</div>
+<p>Data is for the taking. No matter who, no matter how private or personal the data in question.</p>
+<p>Even despite there being sufficient scholarship proving the harm of certain applications (such as Facial Recognition), the same old adage of Progress and Innovation is touted and used to justify the obsession with creating technological solutions to societal problems.</p>
+<p>Self-affirming ‘Fairness’ and ‘Ethics’ certificates are stamped onto data collection strategies, while the ground reality remains discriminatory and predatory.</p>
+<p>A data point might just look like a bunch of numbers loaded in a Data frame, but the irrevocable truth is that it wasn’t created out of thin air – it was collected by an power-wielding entity, about a living-breathing human being, in a socio-techno-political context.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -298,13 +226,13 @@ The ground starts splitting into 4-5 different land masses and people at the bou
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -314,7 +242,7 @@ The ground starts splitting into 4-5 different land masses and people at the bou
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="content.html" title="previous page">Take a look at our visualization</a>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Welcome to Decoded Reality</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
