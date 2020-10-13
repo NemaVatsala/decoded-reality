@@ -31,11 +31,10 @@ decode_reality.visualize(optimization)
 decode_reality.explain(optimization)
 
 
-# When training an algorithm, our objective is to learn as many associations as possible between the inputs and outputs, so that the algorithm can use these to faithfully reproduce the same kind of predictions that were made by it’s human predecessors.
+# When training a Learning algorithm, our objective is to learn as many associations as possible from the training data, so that the algorithm can use these to faithfully reproduce the same kind of predictions that were made by it’s human predecessors.
 # 
 # The algorithm has no inherent way of determining which learned associations are ‘good’ and which are ‘harmful’. That is for the human to decide.
 # 
-# Any association that the human decides is ‘bad’ or incorrectly learned for the task at hand, is deemed to be a ‘Bias’.
-# What happens when the model is trained on data generated from an oppressive and racist society? An ‘accurate’ model will faithfully learn the discriminatory associations in its training data.
+# Any association that the human decides is ‘bad’ or incorrectly learned for the task at hand, is deemed to be a ‘Bias’. What happens when the model is trained on data generated from an oppressive and racist society? An ‘accurate’ model will faithfully learn the pre-existing biases<sup>7</sup> in society as discriminatory associations in its training data. 
 # 
-# If the human in charge is in a position of privilege and does not deem this model behavior as ‘harmful’ or ‘biased’,  we end up deploying predatory models back into the broken ecosystem from which they were created, to wreak the same havoc all over again. 
+# If the human in charge is in a position of privilege and does not deem this model behavior as ‘harmful’ or ‘biased’,  we end up deploying predatory models back into the broken ecosystem from which they were created, to in turn give rise to new emergent biases<sup>7</sup>. 
