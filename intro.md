@@ -15,7 +15,7 @@ The AI accountability gap<sup>4</sup> enables the ones in power to justify self-
 
 All the panels in this piece are licensed [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/), please refer to the license page for details on how you can use this artwork. 
 
-**TL;DR:** Feel free to use any of the artwork (high quality images available [here](https://github.com/ai-ethics/decoded-reality/images/)) in your presentations/articles as long as you provide the proper citation and do not make modifications to the art. 
+**TL;DR:** Feel free to use any of the artwork (high quality images available [here](https://github.com/ai-ethics/decoded-reality/tree/master/images)) in your presentations/articles as long as you provide the proper citation and do not make modifications to the art. 
 
 **Cite as:** Falaah Arif Khan and Abhishek Gupta. “Decoded Reality” (2020)
 
