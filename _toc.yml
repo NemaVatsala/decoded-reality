@@ -5,3 +5,4 @@
     - file: model_training
     - file: model_deployment
     - file: ack
+    - file: terms_of_use
