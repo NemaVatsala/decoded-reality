@@ -1,6 +1,6 @@
 # Book settings
 title: Decoded Reality
-author: Falaah Arif Khan and Abhishek Gupta.
+author: <a href="https://falaaharifkhan.github.io/research/"> Falaah Arif Khan </a> and <a href="https://atg-abhishek.github.io/"> Abhishek Gupta </a>.
 logo: images/Decoded_reality.png
 
 # Information about where the book exists on the web
@@ -8,9 +8,23 @@ repository:
   url                       : https://github.com/ai-ethics/decoded-reality
   branch                    : master
 
-launch_buttons:
-  binderhub_url: https://mybinder.org
+parse:
+  myst_extended_syntax: true
 
-latex:
-  latex_documents:
-    targetname: book.tex
+html:
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : false  # Whether to add a link to your repository button
+  use_issues_button         : false  # Whether to add an "open an issue" button
+  extra_navbar              : false
+  extra_footer              : false
+
+launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : false #https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : false  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  colab_url                 : false # The URL of Google Colab (https://colab.research.google.com)
+  full-screen-button        : false
+
+  sphinx: #to improve accessibility
+  language: en

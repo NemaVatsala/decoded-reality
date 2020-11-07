@@ -92,7 +92,7 @@
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to Decoded Reality
+   Welcome to Decoded Reality!
   </a>
  </li>
 </ul>
@@ -137,10 +137,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -194,23 +190,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ai-ethics/decoded-reality/master?urlpath=tree/model_deployment.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -228,6 +207,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">model_training</span> <span class="k">import</span> <span class="n">model</span>
+<span class="kn">from</span> <span class="nn">model_deployment</span> <span class="k">import</span> <span class="n">real_world</span>
 <span class="kn">from</span> <span class="nn">resistance_ai</span> <span class="k">import</span> <span class="n">decode_reality</span>
 </pre></div>
 </div>
@@ -235,20 +215,20 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">real_world</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">extract_data</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">real_world_data</span> <span class="o">=</span> <span class="n">real_world</span><span class="o">.</span><span class="n">extract</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">real_world</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">real_world</span><span class="p">)</span>
 <span class="n">decode_reality</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><img alt="Three groups of people stand on a terrain. The group to the right shows a group of 2 male and 2 female caucasians, all dressed in different shades of red. The groups in the center and to the left show people of different ethnicities and genders. They are all dressed in greens and blues. There is a helicopter flying above them, dropping ‘color bombs’ onto the people in blue and green. The bombs have exploded and are coloring the people red. The helicopter blades read the words ‘Erasure’, ‘Oppression’ and ‘Colonization’." src="_images/Predictions.gif" /></p>
+<a class="responsive reference internal image-reference" href="_images/Predictions.gif"><img alt="Three groups of people stand on a terrain. The group to the right shows a group of 2 male and 2 female caucasians, all dressed in different shades of red. The groups in the center and to the left show people of different ethnicities and genders. They are all dressed in greens and blues. There is a helicopter flying above them, dropping ‘color bombs’ onto the people in blue and green. The bombs have exploded and are coloring the people red. The helicopter blades read the words ‘Erasure’, ‘Oppression’ and ‘Colonization’." class="responsive" src="_images/Predictions.gif" style="width: 800px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decode_reality</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
@@ -257,8 +237,8 @@
 </div>
 </div>
 <p>Remember those spurious class labels? The ones that did not represent the ground truth and were merely proxies for infinitely more complicated social phenomena. What do you think happens when data-driven algorithms get deployed back into the real world? The groups whose identities were erased while determining class labels are further oppressed by algorithmic decision making systems that enforce reductive categorizations in the real world.</p>
-<p>Predictions from algorithms are used to make decisions about everything under the sun, and entities, cultures and values that do not conform with the system in which these models were created are forcibly erased<sup>8</sup>.</p>
-<p>The ones in power control the algorithms and thereby quickly start dictating culture, values, judgements, popular opinion and a whole plethora of constructs, far beyond the scope of the prediction task itself<sup>9</sup>.</p>
+<p>For example, take the notoriously biased Google Search<sup>9</sup>, which reflects social inequalities in it’s misleading and at times derogatory results on minority groups, such as Women of Color, while painting historically powerful demographics such as white cis-men in a positive light.</p>
+<p>Outputs from algorithms are used to make decisions about everything under the sun and reach well beyond the scope of the prediction task itself. Culture, values, judgements, popular opinion and a whole plethora of social constructs are now shaped by technology.<sup>8</sup> In order to survive, the marginalized have to choose between oppression or erasure.</p>
 <p>If you think building AI is a purely engineering/math problem, that has nothing to do with Social hierarchies and Power dynamics, THINK AGAIN.</p>
 </div>
 
@@ -298,7 +278,7 @@
     <div class="container">
       <p>
         
-          By Falaah Arif Khan and Abhishek Gupta.<br/>
+          By <a href="https://falaaharifkhan.github.io/research/"> Falaah Arif Khan </a> and <a href="https://atg-abhishek.github.io/"> Abhishek Gupta </a>.<br/>
         
             &copy; Copyright 2020.<br/>
       </p>

@@ -1,4 +1,5 @@
 - file: intro
+  title: About
   sections:
     - file: model_inputs
     - file: model_labels

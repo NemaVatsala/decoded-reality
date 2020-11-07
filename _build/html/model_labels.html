@@ -92,7 +92,7 @@
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to Decoded Reality
+   Welcome to Decoded Reality!
   </a>
  </li>
 </ul>
@@ -137,10 +137,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -194,23 +190,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ai-ethics/decoded-reality/master?urlpath=tree/model_labels.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -241,7 +220,7 @@
 </div>
 </div>
 </div>
-<p><img alt="A hooded white male shoots an arrow into a large terrain. The male’s body is superimposed with the word “Engineering”. The arrow reads “Objectivity”. The arrow is shown to pierce into the ground and reads the word ‘Classification’ The ground starts splitting into 4-5 different land masses and people at the boundary start to fall into the abyss below. The people that remain on land are colored uniformly, while the people falling into the abyss are multicolored. There are a few people on the terrains trying to help the people falling below." src="_images/Labels.gif" /></p>
+<a class="responsive reference internal image-reference" href="_images/Labels.gif"><img alt="A hooded white male shoots an arrow into a large terrain. The male’s body is superimposed with the word “Engineering”. The arrow reads “Objectivity”. The arrow is shown to pierce into the ground and reads the word ‘Classification’ The ground starts splitting into 4-5 different land masses and people at the boundary start to fall into the abyss below. The people that remain on land are colored uniformly, while the people falling into the abyss are multicolored. There are a few people on the terrains trying to help the people falling below." class="responsive" src="_images/Labels.gif" style="width: 800px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decode_reality</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="n">model_outputs</span><span class="p">)</span>
@@ -249,10 +228,11 @@
 </div>
 </div>
 </div>
-<p>To teach an algorithm how to make a prediction, we must feed it with the ‘true’ predictions – usually, the predictions made by it’s human predecessors –  as class labels for the given task.</p>
-<p>But, human decisions are inherently subjective! In most tasks, there is no ground truth and class labels are just proxies for underlying social phenomena. And so, we go about trying to quantify the qualitative<sup>7</sup>, enforcing ‘objective’ mathematical formalizations of social constructs that are inherently complex and fluid.</p>
-<p>Those who are already well represented in society get a corresponding rich representation in data, whereas those who do not fit into any one social construct, fall through the cracks. To be represented in the data, they are forced to give up their identity and be pushed into one of the ‘acceptable’ predetermined classes<sup>8</sup>.</p>
-<p>Moreover, since they do not actually conform with their allocated class label, the algorithm sees them as appearing ‘on the margin’ and the effects of misclassifications from misbehaving algorithms is later felt most profoundly by these demographics.</p>
+<p>All models are wrong, some models are useful<sup>3</sup>. The problem at hand informs our choice of model targets (what to consider as ‘true’ predictions). In most settings, we use the predictions made by human predecessors as ground truth.</p>
+<p>But, human decisions are inherently subjective! In most tasks, model targets are just proxies for underlying social phenomena. And so, we go about trying to quantify the qualitative<sup>7</sup>, enforcing ‘objective’ mathematical formalizations of social constructs that are inherently fluid.</p>
+<p>Take ‘gender prediction’ for example<sup>5</sup>. Gender is a social construct. Historically, gender has been reduced to sex and models trained to predict gender try to learn what a ‘woman’ looks like, based off of pictures of people labelled as ‘female’.</p>
+<p>What happens to people who do not conform with stereotypical gender binaries? To be represented in the data, those at the fringes of society are forced to give up their identity and be pushed into one of the ‘acceptable’ predetermined classes<sup>8</sup>. On the other hand, those in power get to dictate the dominant social narrative and, by construction, get a rich representation in data. In a society that identifies people with short hair and masculine features as ‘men’, algorithms will also determine people’s genders using the same reductive notions.</p>
+<p>In our hasty selection of model labels, we shoot the arrow of ‘objectivity’ on to an infinitely complex social landscape. As a result, those who do not neatly align with the prevalent stereotypes fall through the cracks.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -291,7 +271,7 @@
     <div class="container">
       <p>
         
-          By Falaah Arif Khan and Abhishek Gupta.<br/>
+          By <a href="https://falaaharifkhan.github.io/research/"> Falaah Arif Khan </a> and <a href="https://atg-abhishek.github.io/"> Abhishek Gupta </a>.<br/>
         
             &copy; Copyright 2020.<br/>
       </p>
