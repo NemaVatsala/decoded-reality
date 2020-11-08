@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,16 +6,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Model Training &#8212; Decoded Reality</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -25,8 +44,8 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -39,8 +58,8 @@
     <link rel="next" title="Model Deployment" href="model_deployment.html" />
     <link rel="prev" title="Model Labels" href="model_labels.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -56,7 +75,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="index.html">
   
-  <img src="_static/maiei_logo.png" class="logo" alt="logo">
+  <img src="_static/Decoded_reality.png" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Decoded Reality</h1>
@@ -73,7 +92,7 @@
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to Decoded Reality
+   Welcome to Decoded Reality!
   </a>
  </li>
 </ul>
@@ -108,15 +127,16 @@
    References
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="terms_of_use.html">
+   Terms of Use
+  </a>
+ </li>
 </ul>
 
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -164,43 +184,17 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ai-ethics/decoded-reality/master?urlpath=tree/model_training.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/ai-ethics/decoded-reality/blob/master/model_training.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
 
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -212,8 +206,8 @@
 <h1>Model Training<a class="headerlink" href="#model-training" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">model_training</span> <span class="kn">import</span> <span class="n">model</span>
-<span class="kn">from</span> <span class="nn">resistance_ai</span> <span class="kn">import</span> <span class="n">decode_reality</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">model_training</span> <span class="k">import</span> <span class="n">model</span>
+<span class="kn">from</span> <span class="nn">resistance_ai</span> <span class="k">import</span> <span class="n">decode_reality</span>
 </pre></div>
 </div>
 </div>
@@ -233,7 +227,7 @@
 </div>
 </div>
 </div>
-<p><img alt="Two ethereal forms are in the center of the screen. The one at the back is composed of colorful pixels and has the word ‘Data’’ written in hollow characters behind it. The words ‘Racism’ and ‘Oppression’ are written within the word ‘Data’. The figure in the front is composed of a network of graph nodes/vertices and edges and has the word ‘Model’ written behind it in hollow characters. The word ‘Discriminatory’ is written within the world ‘Model’. Two humans are looking at the ethereal beings. To the right stands a Caucasian male, who is emphatically blowing a kiss to the Model. To the left stands an African-American female, who is looking at the model in disapproval while flames rise around her. " src="_images/Optimization.gif" /></p>
+<a class="responsive reference internal image-reference" href="_images/Optimization.gif"><img alt="Two ethereal forms are in the center of the screen. The one at the back is composed of colorful pixels and has the word ‘Data’’ written in hollow characters behind it. The words ‘Racism’ and ‘Oppression’ are written within the word ‘Data’. The figure in the front is composed of a network of graph nodes/vertices and edges and has the word ‘Model’ written behind it in hollow characters. The word ‘Discriminatory’ is written within the world ‘Model’. Two humans are looking at the ethereal beings. To the right stands a Caucasian male, who is emphatically blowing a kiss to the Model. To the left stands an African-American female, who is looking at the model in disapproval while flames rise around her." class="responsive" src="_images/Optimization.gif" style="width: 800px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decode_reality</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="n">optimization</span><span class="p">)</span>
@@ -241,10 +235,10 @@
 </div>
 </div>
 </div>
-<p>When training a Learning algorithm, our objective is to learn as many associations as possible from the training data, so that the algorithm can use these to faithfully reproduce the same kind of predictions that were made by it’s human predecessors.</p>
+<p>Data-driven algorithms seek to learn associations in their training data. What happens when the model is trained on data generated from an oppressive and racist society? An ‘accurate’ model will faithfully learn the pre-existing biases<sup>7</sup> in society in order to reproduce the same kind of classifications as it saw during training.</p>
 <p>The algorithm has no inherent way of determining which learned associations are ‘good’ and which are ‘harmful’. That is for the human to decide.</p>
-<p>Any association that the human decides is ‘bad’ or incorrectly learned for the task at hand, is deemed to be a ‘Bias’. What happens when the model is trained on data generated from an oppressive and racist society? An ‘accurate’ model will faithfully learn the pre-existing biases<sup>7</sup> in society as discriminatory associations in its training data.</p>
-<p>If the human in charge is in a position of privilege and does not deem this model behavior as ‘harmful’ or ‘biased’,  we end up deploying predatory models back into the broken ecosystem from which they were created, to in turn give rise to new emergent biases<sup>7</sup>.</p>
+<p>Any association that the human decides is ‘bad’ or incorrectly learned for the task at hand, is deemed to be a ‘Bias’. What happens when the human in charge comes from a place of priviledge and fails to perceive these associations, or the resulting behavior, as harmful? Take the allocation of grades, for example. If a model spuriously associates the prestige of a school with the success of it’s students, it ends up discriminating against students belonging to less affluent demographics. If the ones evaluating the algorithm are from opulence themselves, then the harmful correlation of institutional ranking with academic success is overlooked by them and these discriminatory associations learned by the model would not be seen as ‘biases’.</p>
+<p>If we’re not conscientious and deliberate in evaluating the behavior of algorithms on <em>all</em> demographics, we end up deploying predatory models back into the broken ecosystem from which they were created, to in turn give rise to new emergent biases<sup>7</sup>.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -283,7 +277,7 @@
     <div class="container">
       <p>
         
-          By Falaah Arif Khan and Abhishek Gupta.<br/>
+          By <a href="https://falaaharifkhan.github.io/research/"> Falaah Arif Khan </a> and <a href="https://atg-abhishek.github.io/"> Abhishek Gupta </a>.<br/>
         
             &copy; Copyright 2020.<br/>
       </p>
@@ -295,7 +289,10 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
   </body>
 </html>
